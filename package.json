@@ -10,7 +10,8 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy" : "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "convert-jsx": "babel src --out-dir dist --extensions '.jsx' --presets=@babel/preset-react"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
@@ -19,6 +20,9 @@
     "react-router-dom": "^6.22.3"
   },
   "devDependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.24.0",
+    "@babel/preset-react": "^7.23.3",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
     "@vitejs/plugin-react": "^4.2.1",
